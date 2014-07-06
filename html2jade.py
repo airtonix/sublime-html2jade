@@ -6,6 +6,7 @@ import subprocess
 class HtmlToJadeFromFileCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         source = self.view.file_name()
+        target = source
         if source.endswith(".html"):
             target = source + '.jade'
         if target:
